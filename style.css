@@ -1,0 +1,823 @@
+:root {
+  --bg: #f6f6f4;
+  --paper: #fcfbf8;
+  --text: #090909;
+  --muted: #656565;
+  --dark: #030303;
+  --accent: #d3ff00;
+  --line: rgba(10, 10, 10, 0.22);
+  --shell: min(1320px, calc(100vw - 64px));
+  --shadow: 0 28px 60px rgba(0, 0, 0, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+  background: var(--paper);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.shell {
+  width: var(--shell);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 28px;
+  background: linear-gradient(to bottom, rgba(252, 251, 248, 0.98), rgba(252, 251, 248, 0.75), transparent);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.75rem;
+  letter-spacing: 0.22em;
+}
+
+.brand__mark {
+  width: 18px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at center, transparent 28%, rgba(0, 0, 0, 0.9) 29% 32%, transparent 33%),
+    repeating-conic-gradient(from 0deg, rgba(0, 0, 0, 0.95) 0deg 8deg, transparent 8deg 16deg);
+}
+
+.brand__mark--large {
+  width: 60px;
+}
+
+.brand__name,
+.footer__name {
+  font-family: "Arial Black", "Avenir Next", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.site-nav {
+  display: flex;
+  gap: 28px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  position: absolute;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.menu-toggle span:first-child {
+  transform: translateY(-4px);
+}
+
+.menu-toggle span:last-child {
+  transform: translateY(4px);
+}
+
+.menu-toggle.is-open span:first-child {
+  transform: rotate(45deg);
+}
+
+.menu-toggle.is-open span:last-child {
+  transform: rotate(-45deg);
+}
+
+.hero {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding-top: 92px;
+  background: var(--paper);
+}
+
+.hero__inner {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 40px;
+  padding: 100px 0 64px;
+}
+
+.hero__copy {
+  position: relative;
+  width: 100%;
+}
+
+.hero h1 {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Arial Black", "Avenir Next", "Helvetica Neue", sans-serif;
+  font-size: clamp(4rem, 7.2vw, 8rem);
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+}
+
+.hero__side {
+  position: absolute;
+  right: 5%;
+  top: 36%;
+  width: min(280px, 24vw);
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.hero__eyebrow {
+  order: 2;
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero__arrow {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  background: var(--dark);
+}
+
+.intro__media {
+  min-height: 930px;
+  background: url("assets/hero-photo.png") center top / cover no-repeat;
+}
+
+.intro__panel {
+  display: grid;
+  place-items: center;
+  padding: 96px 68px 68px;
+  color: white;
+}
+
+.intro__content {
+  max-width: 560px;
+}
+
+.intro__content h2,
+.services h2,
+.testimonials h2,
+.portfolio h2,
+.cta-panel h2 {
+  margin: 0 0 28px;
+  font-family: "Arial Black", "Avenir Next", "Helvetica Neue", sans-serif;
+  font-size: clamp(2.5rem, 4vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.pill-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.pill {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: white;
+  color: black;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  transform: rotate(-13deg);
+}
+
+.pill--dark {
+  background: #0c0c0c;
+  color: white;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 38px;
+  padding: 16px 26px;
+  border-radius: 4px;
+  background: var(--accent);
+  color: #0a0a0a;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.intro__features {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  padding: 42px 0 56px;
+  color: white;
+}
+
+.feature {
+  position: relative;
+  padding-left: 60px;
+}
+
+.feature__number {
+  position: absolute;
+  left: 0;
+  top: -18px;
+  font-family: "Arial Black", "Avenir Next", "Helvetica Neue", sans-serif;
+  font-size: 4.9rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.08);
+}
+
+.feature h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+}
+
+.feature p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.75;
+}
+
+.section-white {
+  position: relative;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.watermark {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140%;
+  text-align: center;
+  font-family: "Arial Black", "Avenir Next", "Helvetica Neue", sans-serif;
+  font-size: clamp(4rem, 11vw, 10rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: rgba(0, 0, 0, 0.03);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.watermark--services {
+  top: 12px;
+}
+
+.watermark--portfolio {
+  top: 12px;
+}
+
+.services {
+  padding: 146px 0 0;
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(320px, 1.1fr);
+  gap: 88px;
+  align-items: start;
+}
+
+.services__intro {
+  padding-top: 58px;
+}
+
+.services__list {
+  padding-top: 34px;
+}
+
+.service-item {
+  border-top: 1px solid var(--line);
+}
+
+.service-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.service-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.service-toggle span:first-child {
+  display: block;
+  font-family: "Arial Black", "Avenir Next", "Helvetica Neue", sans-serif;
+  font-size: clamp(1.8rem, 2.3vw, 3.1rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.service-icon {
+  flex: 0 0 auto;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.service-item.is-open .service-icon {
+  transform: rotate(45deg);
+}
+
+.service-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.service-content p {
+  max-width: 540px;
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.stats {
+  padding: 78px 0 88px;
+}
+
+.stats__intro {
+  margin: 0;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.stat strong {
+  display: block;
+  font-family: "Arial Black", "Avenir Next", "Helvetica Neue", sans-serif;
+  font-size: clamp(4.5rem, 6vw, 7rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.stat span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.testimonials {
+  background: var(--dark);
+  color: white;
+}
+
+.testimonials__copy {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.95fr) minmax(380px, 1.05fr);
+  gap: 72px;
+  align-items: center;
+  padding: 92px 0;
+}
+
+.testimonials__text {
+  padding-left: 28px;
+}
+
+.testimonials blockquote {
+  margin: 60px 0 46px;
+  max-width: 580px;
+  font-size: 1.25rem;
+  line-height: 1.65;
+  position: relative;
+}
+
+.testimonials blockquote::before {
+  content: "”";
+  position: absolute;
+  left: -0.14em;
+  top: -0.34em;
+  font-family: "Arial Black", "Avenir Next", "Helvetica Neue", sans-serif;
+  font-size: 7rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.author__avatar {
+  width: 52px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, #979797 0 18%, #4f4f4f 18% 40%, #1d1d1d 41% 100%);
+}
+
+.author span {
+  display: block;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.testimonials__photo {
+  min-height: 720px;
+  background: url("assets/testimonial-photo.png") center center / cover no-repeat;
+}
+
+.portfolio {
+  padding: 146px 0 86px;
+}
+
+.portfolio__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.portfolio__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 28px;
+}
+
+.slider-nav {
+  display: flex;
+  gap: 12px;
+}
+
+.slider-btn,
+.to-top {
+  width: 54px;
+  height: 54px;
+  border: 0;
+  border-radius: 50%;
+  background: #0a0a0a;
+  color: white;
+  cursor: pointer;
+}
+
+.slider-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.portfolio__viewport {
+  overflow: hidden;
+  margin-top: 54px;
+}
+
+.portfolio__track {
+  display: flex;
+  gap: 24px;
+  will-change: transform;
+  transition: transform 0.35s ease;
+}
+
+.project-card {
+  flex: 0 0 calc((100% - 48px) / 3);
+  min-width: 0;
+}
+
+.project-card__image {
+  height: min(31vw, 430px);
+  background-size: cover;
+  background-position: center;
+}
+
+.project-card__image--one {
+  background-image: url("images/trevi.jpg");
+}
+
+.project-card__image--two {
+  background-image: url("images/promethee_fitness.jpg");
+}
+
+.project-card__image--three {
+  background-image: url("images/lavoie_electrique.jpg");
+}
+
+.project-card__image--four {
+  background-image: url("images/clinique_dentaire_montmagny.jpg");
+}
+
+.project-card h3 {
+  margin: 14px 0 6px;
+  font-family: "Arial Black", "Avenir Next", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.project-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.cta-panel {
+  position: relative;
+  min-height: 520px;
+  background: #0b2434 url("assets/cta-bg.png") center center / cover no-repeat;
+  color: white;
+}
+
+.cta-panel__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 26, 38, 0.55);
+}
+
+.cta-panel__content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  padding: 116px 0;
+}
+
+.cta-panel p {
+  max-width: 600px;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.site-footer {
+  position: relative;
+  padding: 76px 0 64px;
+  background: var(--paper);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 0.85fr 1fr;
+  gap: 54px;
+  align-items: start;
+}
+
+.footer__brand {
+  display: grid;
+  justify-items: start;
+  gap: 18px;
+  padding-top: 14px;
+}
+
+.footer__name {
+  font-size: 4rem;
+  line-height: 0.95;
+}
+
+.site-footer h3 {
+  margin: 0 0 22px;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.site-footer p {
+  margin: 0 0 14px;
+  line-height: 1.55;
+}
+
+.copyright {
+  margin: 44px 0 0;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+.to-top {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  background: white;
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 1120px) {
+  .site-nav {
+    position: fixed;
+    top: 76px;
+    right: 22px;
+    display: none;
+    flex-direction: column;
+    gap: 18px;
+    padding: 18px 20px;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow);
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    position: relative;
+  }
+
+  .hero__side {
+    position: static;
+    width: min(540px, 100%);
+    margin: 20px auto 0;
+    text-align: center;
+  }
+
+  .intro,
+  .services__grid,
+  .testimonials__copy,
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro__media,
+  .testimonials__photo {
+    min-height: 560px;
+  }
+
+  .intro__features,
+  .stats__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    flex-basis: 100%;
+  }
+
+  .portfolio__actions,
+  .portfolio__top {
+    align-items: flex-start;
+  }
+
+  .footer__name {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
+    --shell: min(100vw - 34px, 1320px);
+  }
+
+  .site-header {
+    padding: 18px 16px;
+  }
+
+  .brand {
+    font-size: 1.25rem;
+    letter-spacing: 0.14em;
+  }
+
+  .hero__inner {
+    gap: 26px;
+    padding: 84px 0 42px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.2rem, 15vw, 5rem);
+  }
+
+  .hero__eyebrow {
+    font-size: 0.65rem;
+    text-align: center;
+  }
+
+  .intro__panel,
+  .testimonials__text {
+    padding: 42px 0 12px;
+  }
+
+  .feature {
+    padding-left: 44px;
+  }
+
+  .feature__number {
+    font-size: 3.7rem;
+  }
+
+  .services,
+  .portfolio {
+    padding-top: 110px;
+  }
+
+  .services__grid {
+    gap: 38px;
+  }
+
+  .service-item span {
+    font-size: 1.8rem;
+  }
+
+  .stats {
+    padding-bottom: 62px;
+  }
+
+  .stats__grid {
+    gap: 34px;
+  }
+
+  .testimonials__copy {
+    gap: 36px;
+    padding: 62px 0;
+  }
+
+  .testimonials blockquote {
+    font-size: 1.02rem;
+    margin: 40px 0 32px;
+  }
+
+  .project-card__image {
+    height: 58vw;
+  }
+
+  .cta-panel {
+    min-height: 420px;
+  }
+
+  .cta-panel__content {
+    padding: 82px 0;
+  }
+
+  .footer__grid {
+    gap: 34px;
+  }
+
+  .copyright {
+    margin-top: 34px;
+  }
+}
+
+
+
