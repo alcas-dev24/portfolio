@@ -950,3 +950,255 @@ button {
 
 
 
+
+
+/* === Footer contact redesign inspired by provided reference === */
+.site-footer {
+  padding: 0 0 64px;
+  background: #ececeb;
+}
+
+.footer-contact {
+  padding: 108px 0 84px;
+}
+
+.footer-contact__intro {
+  max-width: 760px;
+  margin-bottom: 56px;
+}
+
+.footer-contact__kicker {
+  margin: 0 0 18px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.footer-contact__intro h2 {
+  margin: 0 0 22px;
+  font-family: "Arial Black", "Avenir Next", "Helvetica Neue", sans-serif;
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+}
+
+.footer-contact__lead {
+  max-width: 760px;
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+.footer-contact__prompts {
+  margin-top: 28px;
+}
+
+.footer-contact__prompts p {
+  margin: 0 0 10px;
+}
+
+.footer-contact__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 72px;
+  align-items: start;
+}
+
+.footer-contact-form {
+  max-width: 100%;
+}
+
+.footer-contact-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 34px 56px;
+}
+
+.footer-field {
+  display: grid;
+  gap: 16px;
+}
+
+.footer-field--full {
+  grid-column: 1 / -1;
+}
+
+.footer-field span {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.footer-field input,
+.footer-field select,
+.footer-field textarea {
+  width: 100%;
+  padding: 0 0 14px;
+  border: 0;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.88);
+  background: transparent;
+  border-radius: 0;
+  color: var(--text);
+  font: inherit;
+  appearance: none;
+}
+
+.footer-field select {
+  cursor: pointer;
+}
+
+.footer-field textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.footer-field input::placeholder,
+.footer-field select,
+.footer-field textarea::placeholder {
+  color: rgba(9, 9, 9, 0.45);
+}
+
+.footer-field input:focus,
+.footer-field select:focus,
+.footer-field textarea:focus {
+  outline: none;
+  border-bottom-color: var(--accent);
+}
+
+.footer-contact-form__footer {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  margin-top: 54px;
+}
+
+.footer-contact-form__submit {
+  flex: 0 0 auto;
+  min-width: 220px;
+  padding: 20px 28px;
+  border: 0;
+  border-radius: 6px;
+  background: #030303;
+  color: #fff;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.footer-contact-form__note {
+  max-width: 430px;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(9, 9, 9, 0.38);
+}
+
+.footer-contact-form__note::before {
+  content: "ⓘ ";
+}
+
+.footer-contact-form__note a {
+  text-decoration: underline;
+}
+
+.footer-contact__sidebar {
+  display: grid;
+  gap: 44px;
+}
+
+.contact-meta {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.contact-meta__icon {
+  display: inline-grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #030303;
+  color: var(--accent);
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.contact-meta h3 {
+  margin: 6px 0 14px;
+  font-family: "Arial Black", "Avenir Next", "Helvetica Neue", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.contact-meta p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.footer__divider {
+  margin-top: 0;
+}
+
+@media (max-width: 1120px) {
+  .footer-contact__body {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .footer-contact__sidebar {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .contact-meta {
+    grid-template-columns: 52px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .footer-contact {
+    padding: 88px 0 64px;
+  }
+
+  .footer-contact__intro {
+    margin-bottom: 40px;
+  }
+
+  .footer-contact-form__grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .footer-contact-form__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    margin-top: 36px;
+  }
+
+  .footer-contact-form__submit {
+    width: 100%;
+  }
+
+  .footer-contact__sidebar {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-meta p {
+    letter-spacing: 0.04em;
+  }
+}
