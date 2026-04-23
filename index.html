@@ -271,6 +271,65 @@ I don’t just make pages look better. I help shape clearer messages, stronger o
     </main>
 
     <footer class="site-footer" id="contact">
+      <div class="shell footer__contact">
+        <div class="footer__contact-copy">
+          <p class="footer__eyebrow">Start your next project</p>
+          <h2>Start your next project</h2>
+          <p class="footer__lead">
+            Looking for a designer and developer who can combine visual quality, technical execution, and strategic thinking? I’m available for selected freelance projects, redesigns, and custom website work.
+          </p>
+          <div class="footer__prompts">
+            <p><strong>Tell me about your project.</strong></p>
+            <p>What are you building, improving, or rethinking?</p>
+          </div>
+        </div>
+
+        <form class="contact-form" action="#" method="post">
+          <div class="contact-form__grid">
+            <label class="form-field">
+              <span>Full Name</span>
+              <input type="text" name="full-name" placeholder="Your name" />
+            </label>
+            <label class="form-field">
+              <span>Email Address</span>
+              <input type="email" name="email" placeholder="your@email.com" />
+            </label>
+            <label class="form-field">
+              <span>Company / Brand</span>
+              <input type="text" name="company" placeholder="Your company or brand" />
+            </label>
+            <label class="form-field">
+              <span>Project Type</span>
+              <select name="project-type">
+                <option value="">Select project type</option>
+                <option value="website-design">Website Design</option>
+                <option value="website-development">Website Development</option>
+                <option value="wordpress">WordPress Development</option>
+                <option value="redesign">Website Redesign</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+            <label class="form-field">
+              <span>Budget Range</span>
+              <select name="budget-range">
+                <option value="">Select budget range</option>
+                <option value="1000-3000">$1,000 – $3,000</option>
+                <option value="3000-5000">$3,000 – $5,000</option>
+                <option value="5000-10000">$5,000 – $10,000</option>
+                <option value="10000-plus">$10,000+</option>
+              </select>
+            </label>
+            <label class="form-field form-field--full">
+              <span>Message</span>
+              <textarea name="message" rows="6" placeholder="Tell me a bit about your project"></textarea>
+            </label>
+          </div>
+          <button class="cta-button contact-form__submit" type="submit">Send Message <span>&nearr;</span></button>
+        </form>
+      </div>
+
+      <div class="shell footer__divider"></div>
+
       <div class="shell footer__grid">
         <div class="footer__brand">
           <span class="brand__mark brand__mark--large"></span>
