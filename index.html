@@ -1,27 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Deep Agency Landing</title>
+    <title>Alejandro Castaneda / Web Developer</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Deep home">
-        <span class="brand__mark"></span>
-        <span class="brand__name">DEEP</span>
+      <a class="brand" href="#top">
+        <img src="images/ac-logo.png" alt="Alejandro Castaneda / Web Developer" style="width: 250px;" />
       </a>
-      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-      </button>
       <nav class="site-nav">
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#work">Work</a>
         <a href="#contact">Contact</a>
       </nav>
+      <div class="lang-switch" aria-label="Language selector">
+        <button type="button" class="lang-btn is-active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="fr">FR</button>
+      </div>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
     </header>
 
     <main id="top">
@@ -30,9 +33,7 @@
           <p class="hero__eyebrow">I design and build websites that look sharp, feel effortless, and perform with purpose.</p>
           <div class="hero__copy">
             <h1>Personal Portfolio / Web Designer & Developer</h1>
-            <p class="hero__side">
-              I design and build websites that look sharp, feel effortless, and perform with purpose.
-            </p>
+            
           </div>
           <a class="hero__arrow" href="#about" aria-label="Scroll down">&#8595;</a>
         </div>
@@ -45,11 +46,9 @@
             <h2>Design with clarity. Build with precision.</h2>
             <p class="pill-line">
               <span class="pill">I’M</span>
-               a web designer and developer focused on creating websites that balance aesthetics, usability, and business goals. My work combines thoughtful design, structured content, and solid development to deliver digital experiences that feel polished, intuitive, and effective.
-
-I don’t just make pages look better. I help shape clearer messages, stronger online presence, and smoother user journeys.
+              <span class="intro__lead-text">Alejandro Castaneda, a web designer and developer focused on creating websites that balance aesthetics, usability, and business goals. My work combines thoughtful design, structured content, and solid development to deliver digital experiences that feel polished, intuitive, and effective. I don’t just make pages look better. I help shape clearer messages, stronger online presence, and smoother user journeys.</span>
             </p>
-            <a class="cta-button" href="#services">MORE ABOUT US <span>&nearr;</span></a>
+            <a class="cta-button" href="#contact">contact me <span>&nearr;</span></a>
           </div>
         </div>
         <div class="intro__features shell">
@@ -86,7 +85,7 @@ I don’t just make pages look better. I help shape clearer messages, stronger o
               
               Whether you need a complete website, a redesign, or a stronger digital presence, I can help shape and build a solution that fits your goals.
             </p>
-            <a class="cta-button" href="#work">OUR SERVICES <span>&nearr;</span></a>
+            <a class="cta-button" href="#contact">contact me <span>&nearr;</span></a>
           </div>
           <div class="services__list">
             <div class="service-item is-open">
@@ -169,59 +168,91 @@ I don’t just make pages look better. I help shape clearer messages, stronger o
           </div>
         </div>
 
-        <div class="stats shell">
-          <p class="stats__intro">Built through experience, consistency, and real client work.</p>
-          <div class="stats__grid">
-            <article class="stat">
-              <strong>10+</strong>
-              <span>YEARS OF EXPERIENCE</span>
-            </article>
-            <article class="stat">
-              <strong>50+</strong>
-              <span>Web projects delivered</span>
-            </article>
-            <article class="stat">
-              <strong>100%</strong>
-              <span>Focused on tailored solutions</span>
-            </article>
-          </div>
+        
         </div>
       </section>
 
-      <section class="testimonials">
-        <div class="testimonials__copy shell">
-          <div class="testimonials__text">
-            <h2>Testimonials</h2>
-            <blockquote>
-              Beautiful, flexible theme. Much more robust than what I needed for this project, but
-              so chic I couldn't resist. Support was also really responsive and even have a code
-              change for me in the next update. Will definitely consider more themes from this
-              developer!
-            </blockquote>
-            <div class="author">
-              <div class="author__avatar"></div>
-              <div>
-                <strong>Maria Whun</strong>
-                <span>Company / CEO</span>
-              </div>
-            </div>
-          </div>
-          <div class="testimonials__photo"></div>
-        </div>
-      </section>
+     <section class="profile-section" id="experience">
+  <div class="shell profile-section__grid">
+    <div class="profile-section__intro">
+      <p class="profile-section__eyebrow">Experience & Capabilities</p>
+      <h2>Design, development, and strategic thinking in one profile.</h2>
+      
+
+      <div class="profile-section__stats">
+        <article class="profile-stat">
+          <strong>10+</strong>
+          <span>Years of experience</span>
+        </article>
+        <article class="profile-stat">
+          <strong>50+</strong>
+          <span>Projects delivered</span>
+        </article>
+        <article class="profile-stat">
+          <strong>3</strong>
+          <span>Main strengths: design, dev, strategy</span>
+        </article>
+      </div>
+    </div>
+
+    <div class="profile-section__content">
+      <article class="profile-card">
+        <span class="profile-card__number">01</span>
+        <h3>What I do</h3>
+        <p>
+          I design and build websites with a strong focus on clarity, modern
+          aesthetics, responsive behavior, and real business goals.
+        </p>
+      </article>
+
+      <article class="profile-card">
+        <span class="profile-card__number">02</span>
+        <h3>Core strengths</h3>
+        <ul class="profile-list">
+          <li>Web Design</li>
+          <li>Front-End Development</li>
+          <li>WordPress Development</li>
+          <li>Website Redesign</li>
+          <li>UI / UX Improvement</li>
+          <li>SEO Foundations</li>
+        </ul>
+      </article>
+
+      <article class="profile-card">
+        <span class="profile-card__number">03</span>
+        <h3>Tools & workflow</h3>
+        <p>
+          HTML, CSS, JavaScript, WordPress, responsive implementation, design
+          systems, content structuring, conversion-focused layouts, and client-ready
+          execution from concept to launch.
+        </p>
+      </article>
+
+      <article class="profile-card">
+        <span class="profile-card__number">04</span>
+        <h3>Open to</h3>
+        <p>
+          Freelance projects, redesign mandates, website development work, and
+          selected remote opportunities where design and development need to work
+          together seamlessly.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
 
       <section class="portfolio section-white" id="work">
         <div class="watermark watermark--portfolio">PORTFOLIO PORTFOLIO PORTFOLIO</div>
         <div class="shell portfolio__top">
           <div>
-            <h2>Our Selected Work</h2>
+            <h2>My Selected Work</h2>
             <p class="pill-line">
               <span class="pill pill--dark">YOUR</span>
-              Partner in Crafting Digital Experiences That Drive Results.
+              <span class="portfolio__tagline-text">Partner in Crafting Digital Experiences That Drive Results.</span>
             </p>
           </div>
           <div class="portfolio__actions">
-            <a class="cta-button" href="#contact">VIEW ALL WORK <span>&nearr;</span></a>
+          
             <div class="slider-nav">
               <button type="button" class="slider-btn" data-dir="-1" aria-label="Anterior">
                 &#8592;
@@ -235,24 +266,78 @@ I don’t just make pages look better. I help shape clearer messages, stronger o
         <div class="portfolio__viewport">
           <div class="portfolio__track">
             <article class="project-card">
-              <div class="project-card__image project-card__image--one"></div>
-              <h3>Landscape</h3>
-              <p>Split Layout</p>
+              <a href="https://rchevrieretfils.com/" class="project-card__link" target="_blank" rel="noopener noreferrer">
+  <div class="project-card__image project-card__image--one"></div>
+</a>
+              
+              <h3>Excavation Rolland Chevrier et Fils</h3>
+              <p>Website design</p>
             </article>
             <article class="project-card">
-              <div class="project-card__image project-card__image--two"></div>
-              <h3>Faces</h3>
-              <p>Big Images</p>
+              <a href="https://prometheefitness.com/" class="project-card__link" target="_blank" rel="noopener noreferrer">
+  <div class="project-card__image project-card__image--two"></div>
+</a>
+              
+              <h3>Prométhée Fitness</h3>
+              <p>Website design</p>
             </article>
             <article class="project-card">
-              <div class="project-card__image project-card__image--three"></div>
-              <h3>Meditation App</h3>
-              <p>Split Layout</p>
+              <a href="https://www.lavoieelectricienvaudreuil.ca/" class="project-card__link" target="_blank" rel="noopener noreferrer">
+  <div class="project-card__image project-card__image--three"></div>
+</a>
+              
+              <h3>Lavoie Électrique</h3>
+              <p>Website design</p>
             </article>
              <article class="project-card">
-              <div class="project-card__image project-card__image--four"></div>
-              <h3>Meditation App</h3>
-              <p>Split Layout</p>
+              <a href="https://cliniquedentairemontmagny.com/" class="project-card__link" target="_blank" rel="noopener noreferrer">
+  <div class="project-card__image project-card__image--four"></div>
+</a>
+              
+              <h3>Clinique dentaire Montmagny</h3>
+              <p>Website design</p>
+            </article>
+            <article class="project-card">
+              <a href="https://www.cliniqueneurolab.com/" class="project-card__link" target="_blank" rel="noopener noreferrer">
+  <div class="project-card__image project-card__image--five"></div>
+</a>
+              <h3>Clinique NeuroLab</h3>
+              <p>Website design</p>
+            </article>
+            <article class="project-card">
+              <a href="https://www.regroupementtdl.ca/" class="project-card__link" target="_blank" rel="noopener noreferrer">
+  <div class="project-card__image project-card__image--six"></div>
+</a>
+              <h3>Regroupement TDL Québec</h3>
+              <p>Website design</p>
+            </article>
+            <article class="project-card">
+              <a href="https://www.gmfcontrecoeur.com/" class="project-card__link" target="_blank" rel="noopener noreferrer">
+  <div class="project-card__image project-card__image--seven"></div>
+</a>
+              <h3>GMF Contrecœur</h3>
+              <p>Website design</p>
+            </article>
+            <article class="project-card">
+              <a href="https://www.sandraleemarquis.com/" class="project-card__link" target="_blank" rel="noopener noreferrer">
+  <div class="project-card__image project-card__image--eight"></div>
+</a>
+              <h3>L’équipe Sandra-Lee Marquis</h3>
+              <p>Website design</p>
+            </article>
+            <article class="project-card">
+              <a href="https://www.sourire.com/" class="project-card__link" target="_blank" rel="noopener noreferrer">
+  <div class="project-card__image project-card__image--nine"></div>
+</a>
+              <h3>Dentistes sur Drummond</h3>
+              <p>Website design</p>
+            </article>
+            <article class="project-card">
+              <a href="https://www.cgodin.qc.ca/formation-continue/" class="project-card__link" target="_blank" rel="noopener noreferrer">
+  <div class="project-card__image project-card__image--ten"></div>
+</a>
+              <h3>Cégep Gérald Godin</h3>
+              <p>Website design</p>
             </article>
           </div>
         </div>
@@ -273,7 +358,6 @@ I don’t just make pages look better. I help shape clearer messages, stronger o
     <footer class="site-footer" id="contact">
       <div class="shell footer__contact footer-contact">
         <div class="footer-contact__intro">
-          <p class="footer-contact__kicker">Section heading</p>
           <h2>Start your next project</h2>
           <p class="footer-contact__lead">
             Looking for a designer and developer who can combine visual quality, technical execution, and strategic thinking? I’m available for selected freelance projects, redesigns, and custom website work.
@@ -327,9 +411,7 @@ I don’t just make pages look better. I help shape clearer messages, stronger o
             </div>
             <div class="footer-contact-form__footer">
               <button class="footer-contact-form__submit" type="submit">Send Message</button>
-              <p class="footer-contact-form__note">
-                All the fields are required. By sending the form you agree to the <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a>.
-              </p>
+              
             </div>
           </form>
 
@@ -337,57 +419,37 @@ I don’t just make pages look better. I help shape clearer messages, stronger o
             <div class="contact-meta">
               <span class="contact-meta__icon" aria-hidden="true">⌖</span>
               <div>
-                <h3>Our Office</h3>
-                <p>123 King Street, London W60 10250<br />United Kingdom</p>
+                <h3>Address</h3>
+                <p>Montreal, Canada</p>
               </div>
             </div>
             <div class="contact-meta">
               <span class="contact-meta__icon" aria-hidden="true">✉</span>
               <div>
                 <h3>Email</h3>
-                <p>support@example.com</p>
+                <p>alcas76@hotmail.com</p>
               </div>
             </div>
             <div class="contact-meta">
-              <span class="contact-meta__icon" aria-hidden="true">⌕</span>
+              <span class="contact-meta__icon" aria-hidden="true">☎</span>
               <div>
                 <h3>Phone</h3>
-                <p>+61 383 767 284</p>
+                <p>+1 438 8252409</p>
               </div>
+            <div><a class="brand" href="#top">
+        <img src="images/ac-logo2.png" alt="Alejandro Castaneda / Web Developer" style="
+    width: 250px;">
+
+      </a></div>
+              
             </div>
           </aside>
         </div>
       </div>
       <div class="shell footer__divider"></div>
 
-      <div class="shell footer__grid">
-        <div class="footer__brand">
-          <span class="brand__mark brand__mark--large"></span>
-          <span class="footer__name">DEEP</span>
-        </div>
-        <div>
-          <h3>OFFICE</h3>
-          <p>PO Box 16122 Collins Street</p>
-          <p>West Victoria 8007</p>
-          <p>Australia</p>
-          <p>geral@example.com</p>
-          <p>(+23) 345 322 233</p>
-        </div>
-        <div>
-          <h3>QUICK LINKS</h3>
-          <p>Home</p>
-          <p>About</p>
-          <p>Services</p>
-          <p>Contacts</p>
-        </div>
-        <div>
-          <h3>LEGAL &amp; PRESS</h3>
-          <p>Privacy Policy</p>
-          <p>Terms &amp; Conditions</p>
-          <p>Presskit</p>
-        </div>
-      </div>
-      <p class="copyright">&copy; DEEP TREETHEMES 2026.</p>
+     
+      <p class="copyright">&copy; AC Web Developer 2026.</p>
       <button class="to-top" type="button" aria-label="Volver arriba">&#8593;</button>
     </footer>
 
